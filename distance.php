@@ -13,8 +13,9 @@
       body {
         height: 100%;
         width: 1390px;
-        margin: 0 0 0 71px;
+        margin: 0;
         padding: 0;
+        background-color: #2C3333;
       }
 
       .commutes {
@@ -27,17 +28,17 @@
         height: 100%;
         min-height: 256px;
         min-width: 360px;
-        overflow: auto;
         width: 100%;
       }
 
       .commutes-info {
         flex: 0 0 110px;
         max-width: 100%;
-        overflow: hidden;
+        margin-left: 175px;
       }
 
       .commutes-initial-state {
+        background-color: #fff;
         border-radius: 8px;
         border: 1px solid #dadce0;
         display: flex;
@@ -199,7 +200,7 @@
       .commutes-destinations .destination {
         border-radius: 4px;
         box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-        color: #5f6368;
+        color: #fff;
         fill: #5f6368;
         height: 72px;
         justify-content: space-between;
@@ -290,7 +291,7 @@
       }
 
       .commutes-destinations .destination .destination-eta {
-        color: #202124;
+        color: #fff;
         font-weight: bold;
         font-size: 22px;
         line-height: 28px;
@@ -358,7 +359,8 @@
         flex: 1;
         overflow: hidden;
         position: relative;
-        width: 100%;
+        width: 1355px;
+        margin-left: 175px;
       }
 
       .commutes-map .map-view {
@@ -517,6 +519,9 @@
     </style>
   </head>
   <body>
+    <?php 
+      include 'header.php';
+    ?>
     <!-- Defined commutes SVGs -->
     <svg class="hide">
       <defs>
@@ -721,6 +726,9 @@
         </div>
       </div>
     </div>
+    <?php 
+      include 'footer.php';
+    ?>
     <script>
     'use strict';
 

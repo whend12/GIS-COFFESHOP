@@ -4,21 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Interactive Maps Coffeeshop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
       .sidebar {
-        width: 140px;
-        height: 100%;
-        background-color: #f2f2f2;
+        width: 170px;
+        height: 98%;
+        background-color: #393646;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 5px;
+        left: 5px;
         overflow-x: hidden;
         text-align: center;
+        transition: width 0.3s;
+        z-index: 1;
       }
 
-      .sidebar h3 {
-        text-align: center;
+      .sidebar .logo {
+        width: 100%;
+        height: 60px;
+        padding-top: 10px;
+      }
+
+      hr {
+        color: #4D4D4D;
       }
 
       .sidebar ul {
@@ -27,49 +36,92 @@
         margin: 0;
       }
 
+      .sidebar li {
+        margin-bottom: 10px;
+      }
+
       .sidebar li a {
         display: block;
-        color: #333;
-        padding: 10px 0;
+        color: #fff;
+        padding: 10px;
         text-decoration: none;
+        transition: padding 0.3s;
       }
 
       .sidebar li a:hover {
-        background-color: #ddd;
+        background-color: #2C3333;
+        padding-left: 15px;
       }
 
       .sidebar li a.active {
         background-color: #333;
         color: #fff;
+        padding-left: 15px;
+      }
+
+      .sidebar li a .fas {
+        color: #fff;
+      }
+
+      /* Responsiveness */
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 140px;
+        }
+
+        /* .sidebar h3 {
+          display: none;
+        } */
+
+        .sidebar li a {
+          padding: 5px;
+          text-align: center;
+        }
+
+        .sidebar li a i {
+          font-size: 16px;
+        }
+
+        .sidebar li a.active {
+          padding-left: 10px;
+        }
       }
     </style>
   </head>
   <body>
     <div class="sidebar">
-      <h3>Coffee Shop</h3>
+      <div class="logo">
+        <img src="img/coffee finder/transparan1.png" width="100" height="50" alt="">
+      </div>
+      <hr>
       <ul>
-        <li><a href="popup.php">Popup</a></li>
-        <li><a href="index.php">Marker</a></li>
-        <!-- <li><a href="">Distance</a></li> -->
-        <li><a href="distance.php">Distance & Transit</a></li>
+        <li>
+          <a href="popup.php"><i class="fas fa-map-marker-alt"></i> Current Location</a>
+        </li>
+        <li>
+          <a href="markers.php"><i class="fas fa-coffee"></i> Coffee Shops</a>
+        </li>
+        <li>
+          <a href="distance.php"><i class="fas fa-road"></i> Distance</a>
+        </li>
       </ul>
     </div>
+
+    <script>
+      // Ambil URL halaman yang sedang aktif
+      const currentLocation = location.href;
+
+      // Ambil semua elemen a pada sidebar
+      const menuItems = document.querySelectorAll(".sidebar a");
+
+      // Loop melalui semua elemen a pada sidebar
+      for (let menuItem of menuItems) {
+        // Jika URL elemen a cocok dengan URL halaman yang sedang aktif
+        if (menuItem.href === currentLocation) {
+          // Tambahkan class "active" pada elemen a tersebut
+          menuItem.classList.add("active");
+        }
+      }
+    </script>
   </body>
 </html>
-
-<script>
-  // Ambil URL halaman yang sedang aktif
-  const currentLocation = location.href;
-
-  // Ambil semua elemen a pada sidebar
-  const menuItems = document.querySelectorAll(".sidebar a");
-
-  // Loop melalui semua elemen a pada sidebar
-  for (let menuItem of menuItems) {
-    // Jika URL elemen a cocok dengan URL halaman yang sedang aktif
-    if (menuItem.href === currentLocation) {
-      // Tambahkan class "active" pada elemen a tersebut
-      menuItem.classList.add("active");
-    }
-  }
-</script>

@@ -66,11 +66,7 @@ INSERT INTO `coffeeshop` (`id`, `name`, `address`, `type`, `lat`, `lng`) VALUES
 (23, 'Hiiyra coffee', 'Jl. Cikarang Baru Raya No.30, Sertajaya, Kec. Cikarang Tim., Kabupaten Bekasi, Jawa Barat 17530', 'coffeeshop', -6.303017, 107.176071),
 (24, 'Toko Kopi Tuan Sua', 'Jl. Tapir Raya No.2, Kota Jababeka, Central Cikarang, Bekasi Regency, West Java 17815', 'coffeeshop', -6.311608, 107.164589),
 (25, 'Tiyasa koffie', 'Jl. Antilop V No.97, RT.6/RW.7, Jayamukti, Central Cikarang, Bekasi Regency, West Java 17530', 'coffeeshop', -6.314730, 107.160027),
-(26, 'Neph Coffee & Eatery', 'Jl. Anggrek No.2/44, Mekarmukti, Kec. Cikarang Utara, Kabupaten Bekasi, Jawa Barat 17530', 'coffeeshop', -6.298995, 107.165535),
-(27, 'GARFEE.ID', 'Perum Cikarang Baru Jl. Cilemahabang Raya No 36 Rt 01/11, Mekarmukti, Kec. Cikarang Utara, Kabupaten Bekasi, Jawa Barat 17530', 'coffeeshop', -6.300339, 107.165688),
-(28, 'KILLA COFFEE', 'Jl. Beruang Raya No.2, Jayamukti, Kec. Cikarang Pusat, Kabupaten Bekasi, Jawa Barat 17530', 'coffeeshop', -6.315037, 107.164185),
-(29, 'ROMEZA COFFEE', 'Ruko Hollywood Boulevard Jababeka Blok A 5A No.37', 'coffeeshop', -6.297653, 107.166855),
-(30, 'Seduh Space - Tea, Coffee & Gelato House', 'Jl. Movie Land No.08, Mekarmukti, Kec. Cikarang Utara, Kabupaten Bekasi, Jawa Barat 17530', 'coffeeshop', -6.296736, 107.167091);
+
 
 --
 -- Indexes for dumped tables
